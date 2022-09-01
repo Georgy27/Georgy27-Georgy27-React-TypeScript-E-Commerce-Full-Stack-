@@ -1,17 +1,22 @@
 import styled from "styled-components";
 import { mobile } from "../../responsive";
 
-const Container = styled.div`
+
+const ItemContainer = styled.div`
   flex: 1;
   margin: 3px;
   height: 70vh;
   position: relative;
+  ${mobile({ height: "25vh" })}
 `;
+const ImageContainer = styled.div`  
+width: 100%;
+  height: 100%;
+`
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mobile({ height: "25vh" })}
 `;
 const Info = styled.div`
   position: absolute;
@@ -37,4 +42,4 @@ const Button = styled.button`
   font-weight: 600;
 `;
 
-export { Container, Image, Info, Title, Button }
+export { ItemContainer, ImageContainer, Image, Info, Title, Button }

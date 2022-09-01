@@ -1,7 +1,11 @@
 import styled from "styled-components";
-import { mobile } from "../../responsive";
+import { mobile, Tablet, smallMobile } from "../../responsive";
+
+
 
 const Container = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
   height: 60vh;
   background-color: #fcf5f5;
   display: flex;
@@ -12,11 +16,13 @@ const Container = styled.div`
 const Title = styled.h2`
   font-size: 70px;
   margin-bottom: 20px;
+  ${mobile({ fontSize: "50px" })}
 `;
 const Description = styled.div`
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
+  ${Tablet({ fontSize: "20px" })}
   ${mobile({ textAlign: "center" })}
 `;
 

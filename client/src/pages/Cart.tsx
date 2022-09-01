@@ -3,13 +3,18 @@ import styled from "styled-components";
 import Announcement from "../components/announcement/Announcement";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
-import { mobile, smallMobile } from "../responsive";
+import { mobile, smallMobile, Pc, Tablet } from "../responsive";
 
-const Container = styled.div``;
+const Container = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
+`;
 
 const Wrapper = styled.div`
   padding: 20px;
-  ${mobile({ padding: "10px" })}
+  margin: 0 auto;
+
+  ${mobile({ padding: "10px" })};
 `;
 
 const Title = styled.h2`
@@ -35,7 +40,7 @@ const TopButton = styled.button<{ typed?: string }>`
 `;
 
 const TopTexts = styled.div`
-  ${mobile({ display: "none" })}
+  ${Tablet({ display: "none" })}
 `;
 const TopText = styled.span`
   text-decoration: underline;
@@ -46,6 +51,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${Tablet({ flexDirection: "column" })}
   ${mobile({ flexDirection: "column" })}
 `;
 const Info = styled.div`
@@ -62,8 +68,9 @@ const ProductDetail = styled.div`
   display: flex;
 `;
 const Image = styled.img`
-  width: 200px;
-  ${smallMobile({ width: "150px" })}
+  width: 100%;
+  max-width: 200px;
+  ${mobile({ maxWidth: "150px" })}
 `;
 const Details = styled.div`
   padding: 20px;

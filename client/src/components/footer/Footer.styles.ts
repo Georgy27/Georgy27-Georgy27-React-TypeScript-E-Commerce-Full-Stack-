@@ -1,15 +1,19 @@
 import styled from "styled-components";
-import { mobile } from "../../responsive";
+import { mobile, Tablet } from "../../responsive";
 
 const Container = styled.div`
+ max-width: 1400px;
+ margin: 0 auto;
+`;
+const Wrapper = styled.footer`
   display: flex;
   ${mobile({ flexDirection: "column" })}
+  ${Tablet({ flexWrap: "wrap" })}
 `;
 const Left = styled.div`
   flex: 1;
-  /* display: flex;
-  flex-direction: column; */
   padding: 20px;
+  /* ${Tablet({ padding: "5px" })} */
 `;
 
 const Logo = styled.h1``;
@@ -34,7 +38,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-
+  ${Tablet({ flex: "0 1 280px" })}
   ${mobile({ display: "none" })}
 `;
 
@@ -71,4 +75,4 @@ const Payment = styled.img`
   width: 50%;
 `;
 
-export { Container, Left, Logo, Description, SocialContainer, SocialIcon, Center, Title, List, ListItem, Right, ContactItem, Payment }
+export { Container, Left, Logo, Description, SocialContainer, SocialIcon, Center, Title, List, ListItem, Right, ContactItem, Payment, Wrapper }

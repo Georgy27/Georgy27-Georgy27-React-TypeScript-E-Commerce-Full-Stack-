@@ -1,9 +1,13 @@
 import styled from "styled-components";
-import { mobile, smallMobile } from "../../responsive";
+import { mobile, Tablet } from "../../responsive";
 
-const Container = styled.div`
+const Header = styled.header`
   height: 60px;
   ${mobile({ height: "50px" })}
+`
+const Container = styled.div`
+ max-width: 1400px;
+ margin: 0 auto;
 `;
 
 const Wrapper = styled.div`
@@ -31,7 +35,8 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
-  width:200px;
+  max-width:200px;
+  min-width: 150px;
   height: 40px;
   position:relative;
   ${mobile({ width: "100px", height: "35px" })}
@@ -49,7 +54,7 @@ const Input = styled.input`
 const Center = styled.div`
   flex: 1;
   text-align: center;
-  ${mobile({ display: "none" })}
+  ${Tablet({ display: "none" })}
 `;
 const Logo = styled.h1`
   font-weight: bold;
@@ -71,4 +76,4 @@ const MenuItem = styled.div`
 `;
 
 
-export { Container, Wrapper, Left, Right, Center, Language, SearchContainer, Input, Logo, MenuItem }
+export { Container, Wrapper, Left, Right, Center, Language, SearchContainer, Input, Logo, MenuItem, Header }

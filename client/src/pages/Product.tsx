@@ -6,9 +6,13 @@ import Navbar from "../components/navbar/Navbar";
 import NewsLetter from "../components/newsLetter/NewsLetter";
 import { mobile } from "../responsive";
 
-const Container = styled.div``;
+const Container = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
+`;
 const Wrapper = styled.div`
-  padding: 50px;
+  padding: 20px;
+
   display: flex;
   ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
@@ -19,10 +23,8 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 90vh;
+  height: 100%;
   object-fit: cover;
-
-  ${mobile({ height: "40vh" })}
 `;
 const InfoContainer = styled.div`
   flex: 1;

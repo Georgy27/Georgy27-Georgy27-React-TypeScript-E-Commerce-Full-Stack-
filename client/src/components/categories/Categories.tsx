@@ -1,13 +1,15 @@
 import { categories } from "../../data";
 import CategoryItem from "./CategoryItem";
-import { Container } from "./Categories.styles";
+import { Container, CategoriesContainer } from "./Categories.styles";
 
 const Categories = () => {
   return (
     <Container>
-      {categories.map((item) => {
-        return <CategoryItem item={item} key={item.id} />;
-      })}
+      <CategoriesContainer>
+        {categories.map((item) => {
+          return <CategoryItem item={item} key={item.id} />;
+        })}
+      </CategoriesContainer>
     </Container>
   );
 };

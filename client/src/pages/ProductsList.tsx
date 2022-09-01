@@ -4,9 +4,12 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 import NewsLetter from "../components/newsLetter/NewsLetter";
 import Products from "../components/products/Products";
-import { mobile } from "../responsive";
+import { mobile, Tablet } from "../responsive";
 
-const Container = styled.div``;
+const Container = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
+`;
 const Title = styled.h2`
   margin: 20px;
 `;
@@ -16,7 +19,7 @@ const FilterContainer = styled.div`
 `;
 const Filter = styled.div`
   margin: 20px;
-  ${mobile({ margin: "0px 20px", display: "flex", flexDirection: "column" })}
+  ${Tablet({ margin: "0px 20px", display: "flex", flexDirection: "column" })}
 `;
 
 const FilterText = styled.span`

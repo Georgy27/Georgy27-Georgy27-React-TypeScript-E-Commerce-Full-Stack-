@@ -2,7 +2,6 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { useState } from "react";
 import { sliderItems } from "../../data";
 import {
-  Container,
   Arrow,
   Wrapper,
   ImgContainer,
@@ -12,6 +11,7 @@ import {
   Description,
   Button,
   Slide,
+  SliderContainer,
 } from "./Slider.styles";
 
 const Slider = () => {
@@ -25,7 +25,7 @@ const Slider = () => {
     }
   };
   return (
-    <Container>
+    <SliderContainer>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
@@ -48,7 +48,7 @@ const Slider = () => {
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
       </Arrow>
-    </Container>
+    </SliderContainer>
   );
 };
 

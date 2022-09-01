@@ -1,13 +1,18 @@
 import styled from "styled-components";
-import { mobile } from "../../responsive";
+import { mobile, Tablet } from "../../responsive";
 
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
+// const Container = styled.div`
+//   max-width: 1400px;
+//   margin: 0 auto;
+// `;
+
+const SliderContainer = styled.div`
+   width: 100%;
+  height: 100vh; 
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })}
+  ${Tablet({ display: "none" })}
 `;
 
 const Arrow = styled.div<{
@@ -41,23 +46,27 @@ const Wrapper = styled.div<{ slideIndex: number }>`
 const Slide = styled.div<{
   bg: string;
 }>`
+ 
+  height: 100vh; 
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
   height: 100%;
-  flex: 1;
+  flex: 1 1 70%;
 `;
 
 const Image = styled.img`
   height: 80%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
+  flex: 1 1 30%;
   padding: 50px;
 `;
 
@@ -77,4 +86,4 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export { Container, Arrow, Wrapper, ImgContainer, Image, InfoContainer, Title, Description, Button, Slide }
+export { SliderContainer, Arrow, Wrapper, ImgContainer, Image, InfoContainer, Title, Description, Button, Slide }

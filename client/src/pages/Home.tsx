@@ -12,6 +12,7 @@ const Home = () => {
       <Announcement />
       <Navbar />
       <Slider />
+
       <Categories />
       <Products />
       <NewsLetter />

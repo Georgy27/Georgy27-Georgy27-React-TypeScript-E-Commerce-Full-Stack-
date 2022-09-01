@@ -17,3 +17,18 @@ export const smallMobile = (props: CSSProp) => {
   }
 `
 }
+
+export const Pc = (props: CSSProp) => {
+  return css`
+    @media only screen and (min-width: 992px){
+    ${props}
+  }
+  `
+}
+export const Tablet = (props: CSSProp) => {
+  return css`
+    @media only screen and (max-width: 810px){
+    ${props}
+  }
+  `
+}

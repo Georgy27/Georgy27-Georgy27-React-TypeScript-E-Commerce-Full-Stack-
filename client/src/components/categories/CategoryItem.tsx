@@ -1,4 +1,11 @@
-import { Container, Image, Info, Title, Button } from "./CategoryItem.styles";
+import {
+  Image,
+  Info,
+  Title,
+  Button,
+  ItemContainer,
+  ImageContainer,
+} from "./CategoryItem.styles";
 
 interface CategoryItemProps {
   item: {
@@ -9,13 +16,15 @@ interface CategoryItemProps {
 }
 const CategoryItem = ({ item }: CategoryItemProps) => {
   return (
-    <Container>
-      <Image src={item.img} />
+    <ItemContainer>
+      <ImageContainer>
+        <Image src={item.img} />
+      </ImageContainer>
       <Info>
         <Title>{item.title}</Title>
         <Button>SHOP NOW</Button>
       </Info>
-    </Container>
+    </ItemContainer>
   );
 };
 
